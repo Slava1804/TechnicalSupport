@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заявки</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container request-container">
+        <h1>Заявки</h1>
+        <div class="request-list">
+            <!-- Список заявок -->
+            <div class="request-item">
+                <h2>Заголовок заявки</h2>
+                <p>Описание заявки</p>
+                <p>Статус: Новое</p>
+            </div>
+        </div>
+        <h2>Создать новую заявку</h2>
+        <form action="/create_request" method="POST">
+            <label for="category">Категория:</label><br>
+            <select id="category" name="category">
+                <option value="1">Пример категории</option>
+            </select><br>
+            <label for="description">Описание проблемы:</label><br>
+            <textarea id="description" name="description"></textarea><br>
+            <input type="submit" value="Создать заявку">
+        </form>
+    </div>
+</body>
+</html>

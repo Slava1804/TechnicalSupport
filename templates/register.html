@@ -1,0 +1,30 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - Help!!!</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Регистрация</h1>
+        <form action="/register" method="POST">
+            <label for="fullname">ФИО:</label><br>
+            <input type="text" id="fullname" name="fullname" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="password">Пароль:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <label for="department">Отдел:</label><br>
+            <select id="department" name="department" required>
+                {% for department in departments %}
+                <option value="{{ department.id }}">{{ department.name }}</option>
+                {% endfor %}
+            </select><br>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+    </div>
+</body>
+</html>
